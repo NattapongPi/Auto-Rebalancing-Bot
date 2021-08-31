@@ -12,7 +12,7 @@ import asyncio
 
 
 async def main():
-    print('===================')
+    print('====================')
     # buy 25% each
     amount = cal_amount()
     for i in range(len(coins)):
