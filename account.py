@@ -27,7 +27,6 @@ def get_balances_as_list():
     balances = get_balances_as_dict()
     balance_use = []
     for i in range(len(balances)):
-        print(float(str(balances[i]['free'])))
         amount = float(str(balances[i]['free']))
         balance_use.append(amount)
     return balance_use

@@ -2,7 +2,7 @@
 #BTC, ETH, BNB, ADA
 #25% each asset
 from account import get_balances_as_list
-from account import get_balance_in_usdt
+from account import get_balance_usdt
 
 from coins import coins
 from coins import min_amount
@@ -12,7 +12,7 @@ from get_price import get_market_price
 
 def cal_weight():
     # each asset same weight
-    balance = get_balance_in_usdt()
+    balance = get_balance_usdt()
     amount = len(coins)
     weight = balance / amount
     weight *= 100
@@ -30,12 +30,15 @@ def cal_amount():
         amounts[i] *= 10**min_amount[i]
         amounts[i] = int(amounts[i])
         amounts[i] /= 10**min_amount[i]
+    print(amounts)
     return amounts
 
+
 def cal_amount_to_sell():
-  amounts = get_balances_as_list()
-  for i in range(len(coins)):
+    amounts = get_balances_as_list()
+    for i in range(len(coins)):
         amounts[i] *= 10**min_amount[i]
         amounts[i] = int(amounts[i])
         amounts[i] /= 10**min_amount[i]
-  return amounts
+    print(amounts)
+    return amounts

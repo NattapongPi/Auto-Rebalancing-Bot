@@ -8,6 +8,8 @@ authors = ["Your Name <you@example.com>"]
 python = "^3.8"
 Flask = "^2.0.1"
 binance = "^0.3"
+discord = "^1.7.3"
+binance-connector = "^1.5.0"
 
 [tool.poetry.dev-dependencies]
 
